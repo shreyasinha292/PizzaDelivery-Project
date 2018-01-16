@@ -2,39 +2,43 @@ package com.project.sources;
 
 public class Staff {
 	
-	private int staff_id;
-	private String staff_name;
+	private int staffId;
+	private String staffName;
 	private String username;
 	private String password;
 	private String category;
 	private String contact;
 	
 	public Staff() {}
+	
+	
 
-	public Staff(int staff_id, String staff_name, String username, String password, String category, String contact) {
+	public Staff(int staffId, String staffName, String username, String password, String category, String contact) {
 		super();
-		this.staff_id = staff_id;
-		this.staff_name = staff_name;
+		this.staffId = staffId;
+		this.staffName = staffName;
 		this.username = username;
 		this.password = password;
 		this.category = category;
 		this.contact = contact;
 	}
 
-	public int getStaff_id() {
-		return staff_id;
+
+
+	public int getStaffId() {
+		return staffId;
 	}
 
-	public void setStaff_id(int staff_id) {
-		this.staff_id = staff_id;
+	public void setStaffId(int staffId) {
+		this.staffId = staffId;
 	}
 
-	public String getStaff_name() {
-		return staff_name;
+	public String getStaffName() {
+		return staffName;
 	}
 
-	public void setStaff_name(String staff_name) {
-		this.staff_name = staff_name;
+	public void setStaffName(String staffName) {
+		this.staffName = staffName;
 	}
 
 	public String getUsername() {
@@ -69,6 +73,7 @@ public class Staff {
 		this.contact = contact;
 	}
 
+	
 	
 
 }

@@ -1,7 +1,7 @@
 package com.project.sources;
 
 public class Customer {
-	private int customer_id;
+	private int customerId;
 	private String name;
 	private String username;
 	private String contact;
@@ -14,10 +14,10 @@ public class Customer {
 	public Customer() {}
 	
 	
-	public Customer(int customer_id, String name, String username, String contact, String dob, String password,
+	public Customer(int customerId, String name, String username, String contact, String dob, String password,
 			String address, String review, double rating) {
 		super();
-		this.customer_id = customer_id;
+		this.customerId = customerId;
 		this.name = name;
 		this.username = username;
 		this.contact = contact;
@@ -29,11 +29,11 @@ public class Customer {
 	}
 
 
-	public int getCustomer_id() {
-		return customer_id;
+	public int getCustomerId() {
+		return customerId;
 	}
-	public void setCustomer_id(int customer_id) {
-		this.customer_id = customer_id;
+	public void setCustomerId(int customer_id) {
+		this.customerId = customer_id;
 	}
 	public String getName() {
 		return name;

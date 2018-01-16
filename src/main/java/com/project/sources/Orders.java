@@ -2,52 +2,64 @@ package com.project.sources;
 
 public class Orders {
 	
-	private int order_id;
-	private int customer_id;
+	private int orderId;
+	private int customerId;
 	private String status;
-	private double total_price;
+	private double totalPrice;
+	
 	
 	public Orders() {}
 
-	public Orders(int order_id, int customer_id, String status, double total_price) {
+
+	public Orders(int orderId, int customerId, String status, double totalPrice) {
 		super();
-		this.order_id = order_id;
-		this.customer_id = customer_id;
+		this.orderId = orderId;
+		this.customerId = customerId;
 		this.status = status;
-		this.total_price = total_price;
+		this.totalPrice = totalPrice;
 	}
 
-	public int getOrder_id() {
-		return order_id;
+
+	public int getOrderId() {
+		return orderId;
 	}
 
-	public void setOrder_id(int order_id) {
-		this.order_id = order_id;
+
+	public void setOrderId(int orderId) {
+		this.orderId = orderId;
 	}
 
-	public int getCustomer_id() {
-		return customer_id;
+
+	public int getCustomerId() {
+		return customerId;
 	}
 
-	public void setCustomer_id(int customer_id) {
-		this.customer_id = customer_id;
+
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
 	}
+
 
 	public String getStatus() {
 		return status;
 	}
 
+
 	public void setStatus(String status) {
 		this.status = status;
 	}
 
-	public double getTotal_price() {
-		return total_price;
+
+	public double getTotalPrice() {
+		return totalPrice;
 	}
 
-	public void setTotal_price(double total_price) {
-		this.total_price = total_price;
+
+	public void setTotalPrice(double totalPrice) {
+		this.totalPrice = totalPrice;
 	}
+
+	
 	
 	
 

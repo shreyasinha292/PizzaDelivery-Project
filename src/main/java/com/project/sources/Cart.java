@@ -2,56 +2,54 @@ package com.project.sources;
 
 public class Cart {
 	
-	private int customer_id;
-	private int cart_item_id;
-	private int cp_id;
-	private int item_id;
+	private int customeId;
+	private int cartItemId;
+	private int cpId;
+	private int itemId;
 	
 	public Cart() {}
-	
-	
 
-	public Cart(int customer_id, int cart_item_id, int cp_id, int item_id) {
+	public Cart(int customeId, int cartItemId, int cpId, int itemId) {
 		super();
-		this.customer_id = customer_id;
-		this.cart_item_id = cart_item_id;
-		this.cp_id = cp_id;
-		this.item_id = item_id;
+		this.customeId = customeId;
+		this.cartItemId = cartItemId;
+		this.cpId = cpId;
+		this.itemId = itemId;
 	}
 
-
-
-	public int getCustomer_id() {
-		return customer_id;
+	public int getCustomeId() {
+		return customeId;
 	}
 
-	public void setCustomer_id(int customer_id) {
-		this.customer_id = customer_id;
+	public void setCustomeId(int customeId) {
+		this.customeId = customeId;
 	}
 
-	public int getCart_item_id() {
-		return cart_item_id;
+	public int getCartItemId() {
+		return cartItemId;
 	}
 
-	public void setCart_item_id(int cart_item_id) {
-		this.cart_item_id = cart_item_id;
+	public void setCartItemId(int cartItemId) {
+		this.cartItemId = cartItemId;
 	}
 
-	public int getCp_id() {
-		return cp_id;
+	public int getCpId() {
+		return cpId;
 	}
 
-	public void setCp_id(int cp_id) {
-		this.cp_id = cp_id;
+	public void setCpId(int cpId) {
+		this.cpId = cpId;
 	}
 
-	public int getItem_id() {
-		return item_id;
+	public int getItemId() {
+		return itemId;
 	}
 
-	public void setItem_id(int item_id) {
-		this.item_id = item_id;
+	public void setItemId(int itemId) {
+		this.itemId = itemId;
 	}
+	
+	
 	
 	
 
