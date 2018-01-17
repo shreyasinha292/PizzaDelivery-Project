@@ -7,12 +7,8 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>PizzaMiniProject Maven Webapp</name>
   <url>http://maven.apache.org</url>
-<<<<<<< HEAD
-    <dependencies>
-=======
- 
-   <dependencies>
->>>>>>> b081504f224ac908549e36e80182b9a297b7b37f
+  
+<dependencies>
     	<dependency>
     		<groupId>javax.servlet</groupId>
     		<artifactId>javax.servlet-api</artifactId>
