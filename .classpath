@@ -86,16 +86,6 @@
 	<classpathentry kind="lib" path="C:/Program Files/spring-framework-5.0.2.RELEASE/libs/spring-websocket-5.0.2.RELEASE.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files/spring-framework-5.0.2.RELEASE/libs/spring-websocket-5.0.2.RELEASE-javadoc.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files/spring-framework-5.0.2.RELEASE/libs/spring-websocket-5.0.2.RELEASE-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Hyderabad-Intern/.m2/repository/javax/ws/rs/javax.ws.rs-api/2.1/javax.ws.rs-api-2.1.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="org.eclipse.jst.component.archivename" value="javax.ws.rs-api-2.1.jar"/>
-			<attribute name="maven.groupId" value="javax.ws.rs"/>
-			<attribute name="maven.artifactId" value="javax.ws.rs-api"/>
-			<attribute name="maven.version" value="2.1"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/Hyderabad-Intern/Downloads/apache-tomcat-8.5.24/apache-tomcat-8.5.24/lib/websocket-api.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
