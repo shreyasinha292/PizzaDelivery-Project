@@ -1,4 +1,4 @@
-package com.project.controller;
+package com.project.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;

@@ -1,4 +1,4 @@
-package com.project.controller;
+package com.project.controllers;
 
 import java.util.List;
 
