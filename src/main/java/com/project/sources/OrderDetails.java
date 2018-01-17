@@ -6,7 +6,10 @@ public class OrderDetails {
 	private int itemId;
 	private int cpId;
 	private int quantity;
+	private boolean isCP;
 	
+	
+
 	public OrderDetails() {}
 
 	public OrderDetails(int odId, int orderId, int itemId, int cpId, int quantity) {
@@ -40,6 +43,14 @@ public class OrderDetails {
 
 	public void setItemId(int itemId) {
 		this.itemId = itemId;
+	}
+	
+	public boolean getisCP() {
+		return isCP;
+	}
+
+	public void setCP(boolean isCP) {
+		this.isCP = isCP;
 	}
 
 	public int getCpId() {
