@@ -3,7 +3,7 @@ package com.project.sources;
 public class Orders {
 	
 	private int order_id;
-	private int customer_id;
+	private int customerId;
 	private String status;
 	private double total_price;
 	
@@ -12,7 +12,7 @@ public class Orders {
 	public Orders(int order_id, int customer_id, String status, double total_price) {
 		super();
 		this.order_id = order_id;
-		this.customer_id = customer_id;
+		this.customerId = customer_id;
 		this.status = status;
 		this.total_price = total_price;
 	}
@@ -26,11 +26,19 @@ public class Orders {
 	}
 
 	public int getCustomer_id() {
-		return customer_id;
+		return getCustomerId();
+	}
+
+	public int getCustomerId() {
+		return customerId;
 	}
 
 	public void setCustomer_id(int customer_id) {
-		this.customer_id = customer_id;
+		setCustomerId(customer_id);
+	}
+
+	public void setCustomerId(int customer_id) {
+		this.customerId = customer_id;
 	}
 
 	public String getStatus() {
