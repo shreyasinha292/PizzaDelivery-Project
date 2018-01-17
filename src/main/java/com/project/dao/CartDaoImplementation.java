@@ -20,14 +20,14 @@ public class CartDaoImplementation implements CartDao{
 	
 	public void addToCart(Cart cart) {
 		String query="Insert into pizzeria.cart(customer_id,cart_item_id,cp_id,item_id)values(?,?,?,?) ";
-		jdbcTemplate.update(query,cart.getCustomer_id(),cart.getCart_item_id(),cart.getCp_id(),cart.getItem_id());
+		jdbcTemplate.update(query,cart.getCustomeId(),cart.getCartItemId(),cart.getCpId(),cart.getItemId());
 		cartItemList.add(cart);
 	}
 	
 	public void deleteFromCart(int cartId) {
 		String query="Delete from pizzeria.cart where customer_id=?";
 		jdbcTemplate.update(query,cartId);
-		//cartItemList.remove(cart);
+
 	}
 	public void deleteItemFromCart(int customerId,int itemId) {
 		String query="Delete from pizzeria.cart where customer_id=?,item_id=?";
