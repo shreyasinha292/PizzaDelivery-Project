@@ -13,13 +13,17 @@ public class MenuOperationsImpl implements MenuOperations{
 	
 	private JdbcTemplate jdbcTemplate;
 	
-	public MenuOperationsImpl(DataSource dataSource) {
+	@Override
+	public void setDataSource(DataSource dataSource) {
+		jdbcTemplate= new JdbcTemplate(dataSource);
 		
-		jdbcTemplate = new JdbcTemplate(dataSource);
 	}
 
-	public MenuOperationsImpl() {
-		super();
+	public List<Menu> getMenu() {
+		List<Menu> menu;
+		String sql = "select * from pizzeria.menu";
+		menu = jdbcTemplate.query(sql, new BeanPropertyRowMapper<Menu>(Menu.class));
+		return menu;
 	}
 
 	public List<Menu> getVegPizza() {

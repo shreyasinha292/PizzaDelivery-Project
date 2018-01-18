@@ -5,24 +5,24 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.project.dao.CartDaoImplementation;
+import com.project.dao.CartDao;
 import com.project.sources.Cart;
 @RestController
 public class CartController {
 	@Autowired
-	CartDaoImplementation cartcontroller;
+	CartDao cartDao;
 	
-	@PostMapping(value = "/")
+	@PostMapping(value = "/xcv")
 	public void addToTheCart(Cart cart) {
-		cartcontroller.addToCart(cart);
+		cartDao.addToCart(cart);
 	}
 	
-	@DeleteMapping(value="/")
+	@DeleteMapping(value="/dsfg")
 	public void deleteFromTheCart(int cartId) {
-		cartcontroller.deleteFromCart(cartId);
+		cartDao.deleteFromCart(cartId);
 	}
-	@DeleteMapping(value="/")
-	public void deleteItemFromTheCart(int customerId,int itemId) {
-		cartcontroller.deleteItemFromCart(customerId,itemId);
+	@DeleteMapping(value="/fgt")
+	public void deleteItemFromTheCart(int customerId,String itemId) {
+		cartDao.deleteItemFromCart(customerId,itemId);
 	}
 }

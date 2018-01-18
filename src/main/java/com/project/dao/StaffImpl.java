@@ -12,9 +12,10 @@ public class StaffImpl implements StaffOperations{
 	private JdbcTemplate jdbcTemplate;
 	static final Logger logger = Logger.getLogger(com.project.dao.StaffImpl.class);
 
-	public StaffImpl(DataSource dataSource) {
+	@Override
+	public void setDataSource(DataSource dataSource) {
+		jdbcTemplate= new JdbcTemplate(dataSource);
 		
-		jdbcTemplate = new JdbcTemplate(dataSource);
 	}
 
 	public void addStaff(Staff staff) {

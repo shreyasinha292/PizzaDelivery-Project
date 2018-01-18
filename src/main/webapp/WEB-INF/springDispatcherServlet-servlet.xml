@@ -18,6 +18,14 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 	
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/pizzeria" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
+	</bean>
+	
 	<bean id="StaffImpl" class="com.project.dao.StaffImpl"
 		autowire="byType">
 		<property name="dataSource" ref="dataSource" />
@@ -33,13 +41,24 @@
 	<bean id="CustomerDaoImplementation" class="com.project.dao.CustomerDaoImplementation"
 		autowire="byType">
 		<property name="dataSource" ref="dataSource" />
-	</bean><bean id="RegisteredCustomerDaoImplementation" class="com.project.dao.RegisteredCustomerDaoImplementation"
+	</bean>
+	<bean id="RegisteredCustomerDaoImplementation" class="com.project.dao.RegisteredCustomerDaoImplementation"
 		autowire="byType">
 		<property name="dataSource" ref="dataSource" />
-	</bean><bean id="OrdersDaoImplementation" class="com.project.dao.OrdersDaoImplementation"
+	</bean>
+	<bean id="OrdersDaoImplementation" class="com.project.dao.OrdersDaoImplementation"
 		autowire="byType">
 		<property name="dataSource" ref="dataSource" />
-	</bean><bean id="CartDaoImplementation" class="com.project.dao.CartDaoImplementation"
+	</bean>
+	<bean id="CartDaoImplementation" class="com.project.dao.CartDaoImplementation"
+		autowire="byType">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="ReviewsDaoImplementation" class="com.project.dao.ReviewsDaoImplementation"
+		autowire="byType">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="CustomizedPizzaOperationsImpl" class="com.project.dao.CustomizedPizzaOperationsImpl"
 		autowire="byType">
 		<property name="dataSource" ref="dataSource" />
 	</bean>

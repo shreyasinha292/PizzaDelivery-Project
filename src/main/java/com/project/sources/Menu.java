@@ -1,18 +1,29 @@
 package com.project.sources;
 
 public class Menu {
-	private int itemId;
+	private String itemId;
 	private String itemName;
 	private String category;
 	private int availability;
 	private double smallPrice;
 	private double mediumPrice;
 	private double largePrice;
+	private String description;
 	
+	public String getDescription() {
+		return description;
+	}
+
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+
 	public Menu() {}
 
 
-	public Menu(int itemId, String itemName, String category, int availability, double smallPrice, double mediumPrice,
+	public Menu(String itemId, String itemName, String category, int availability, double smallPrice, double mediumPrice,
 			double largePrice) {
 		super();
 		this.itemId = itemId;
@@ -25,12 +36,12 @@ public class Menu {
 	}
 
 
-	public int getItemId() {
+	public String getItemId() {
 		return itemId;
 	}
 
 
-	public void setItemId(int itemId) {
+	public void setItemId(String itemId) {
 		this.itemId = itemId;
 	}
 

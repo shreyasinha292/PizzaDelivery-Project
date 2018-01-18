@@ -2,6 +2,8 @@ package com.project.dao;
 
 import java.util.List;
 
+import javax.sql.DataSource;
+
 import com.project.sources.Menu;
 
 
@@ -19,4 +21,7 @@ public interface MenuOperations {
 	
 	public List<Menu> getNonVegToppings();
 	
+	public List<Menu> getMenu();
+	
+	public void setDataSource(DataSource dataSource);
 }

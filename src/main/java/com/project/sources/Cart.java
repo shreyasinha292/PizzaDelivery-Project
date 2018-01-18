@@ -4,12 +4,12 @@ public class Cart {
 	
 	private int customeId;
 	private int cartItemId;
-	private int cpId;
-	private int itemId;
+	private String cpId;
+	private String itemId;
 	
 	public Cart() {}
 
-	public Cart(int customeId, int cartItemId, int cpId, int itemId) {
+	public Cart(int customeId, int cartItemId, String cpId, String itemId) {
 		super();
 		this.customeId = customeId;
 		this.cartItemId = cartItemId;
@@ -33,19 +33,19 @@ public class Cart {
 		this.cartItemId = cartItemId;
 	}
 
-	public int getCpId() {
+	public String getCpId() {
 		return cpId;
 	}
 
-	public void setCpId(int cpId) {
+	public void setCpId(String cpId) {
 		this.cpId = cpId;
 	}
 
-	public int getItemId() {
+	public String getItemId() {
 		return itemId;
 	}
 
-	public void setItemId(int itemId) {
+	public void setItemId(String itemId) {
 		this.itemId = itemId;
 	}
 	

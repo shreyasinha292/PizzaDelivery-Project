@@ -1,0 +1,70 @@
+
+#user  nginx;
+worker_processes  1;
+
+error_log  /var/log/nginx/error.log;
+#error_log  /var/log/nginx/error.log  notice;
+#error_log  /var/log/nginx/error.log  info;
+
+pid        /var/run/nginx.pid;
+
+
+events {
+    worker_connections  1024;
+    #use epoll;
+}
+
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    #log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+    #                  '$status $body_bytes_sent "$http_referer" '
+    #                  '"$http_user_agent" "$http_x_forwarded_for"';
+
+    #access_log  /var/log/nginx/access.log  main;
+
+    sendfile        on;
+    #tcp_nopush     on;
+
+    #keepalive_timeout  0;
+    keepalive_timeout  65;
+
+    #gzip  on;
+
+    include conf.d/*.conf;
+    
+    gzip            on;
+    gzip_min_length 1000;
+    gzip_types      text/plain application/xml;
+
+    gzip_static on;
+    gzip_http_version   1.1;
+    gzip_proxied        expired no-cache no-store private auth;
+    gzip_disable        "MSIE [1-6]\.";
+    gzip_vary           on;
+
+    server {
+        listen 80;
+        access_log  /var/log/nginx/access.log;
+
+        error_page   404          /portal/error4xx.html;
+        error_page   502 503 504  /portal/5xx.html;
+        error_page   403          /portal/forbidden.html;
+
+        server_name localhost;
+
+        location /services {
+            proxy_set_header Host localhost;
+            proxy_pass http://localhost:8080;
+        }
+
+        location / {
+            proxy_set_header Host localhost;
+            proxy_pass http://localhost:3000;
+        }
+    }
+
+    include vhosts.d/*.conf;
+}

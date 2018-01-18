@@ -4,18 +4,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.project.dao.CartDaoImplementation;
-import com.project.dao.RegisteredCustomerDaoImplementation;
-import com.project.sources.Cart;
+import com.project.dao.RegisteredCustomerDao;
 import com.project.sources.Registered_Customers;
 
 @RestController
 public class RegisteredCustomerController {
 	@Autowired
-	RegisteredCustomerDaoImplementation registercustomercontroller;
+	RegisteredCustomerDao registeredCustomerDao;
 	
-	@PostMapping(value = "/")
+	@PostMapping(value = "/dfbv")
 	public void addTheRegisteredCustomer(Registered_Customers rc) {
-		registercustomercontroller.addRegisteredCustomer(rc);
+		registeredCustomerDao.addRegisteredCustomer(rc);
 	}
 }

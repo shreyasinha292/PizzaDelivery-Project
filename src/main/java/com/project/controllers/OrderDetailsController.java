@@ -1,10 +1,15 @@
 package com.project.controllers;
 
+import java.util.List;
+
+import javax.websocket.server.PathParam;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.project.dao.OrderDetailsImlp;
+import com.project.dao.OrderDetailsOperation;
 import com.project.sources.OrderDetails;
 
 
@@ -13,11 +18,22 @@ public class OrderDetailsController {
 
 	
 	@Autowired
-	OrderDetailsImlp orderDetailsImpl;
+	OrderDetailsOperation orderDetails;
 	
-	@PostMapping(value = "/")
-	public void addTheOrders(OrderDetails od) {
+	@PostMapping(value = "/sf")
+	public void addTheOrders(List<OrderDetails> odList) {
 	
-		orderDetailsImpl.addOrders(od);
+		orderDetails.addOrders(odList);
+	}
+	
+	@GetMapping(value = "/ert")
+	public List<OrderDetails> displayAllTheOrderDetails() {
+		return orderDetails.displayAllOrderDetails();
+	}
+	
+	@GetMapping(value = "/gdrg/{orderId}")
+	public  OrderDetails displayTheOrderDetailsById(@PathParam(value = "orderId") String orderId){
+		
+		return orderDetails.displayOrderDetailsById(orderId);
 	}
 }

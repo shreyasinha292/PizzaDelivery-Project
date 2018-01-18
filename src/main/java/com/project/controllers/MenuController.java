@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.project.dao.MenuOperationsImpl;
+import com.project.dao.MenuOperations;
 import com.project.sources.Menu;
 
 
@@ -15,36 +15,42 @@ import com.project.sources.Menu;
 public class MenuController {
 	
 	@Autowired
-	MenuOperationsImpl menuOperationsImpl;
+	MenuOperations menuOperations;
 	
-	@GetMapping(value = "/")
+	@GetMapping(value = "/jfhj")
 	public List<Menu> getTheVegPizza() {
-		return menuOperationsImpl.getVegPizza();
+		return menuOperations.getVegPizza();
+	}
+	
+	@GetMapping(value="/fdsgfwqg")
+	public List<Menu> getTheMenu(){
+		
+		return menuOperations.getMenu();
 	}
 
-	@GetMapping(value = "/")
+	@GetMapping(value = "/oieti")
 	public List<Menu> getTheNonVegPizza() {
-		return menuOperationsImpl.getNonVegPizza();
+		return menuOperations.getNonVegPizza();
 	}
 	
-	@GetMapping(value = "/")
+	@GetMapping(value = "/nvbn")
 	public List<Menu> getTheCombos() {
-		return menuOperationsImpl.getCombos();
+		return menuOperations.getCombos();
 	}
 	
-	@GetMapping(value = "/")
+	@GetMapping(value = "/yuwter")
 	public List<Menu> getTheCrusts() {
-		return menuOperationsImpl.getCrusts();
+		return menuOperations.getCrusts();
 	}
 	
-	@GetMapping(value = "/")
+	@GetMapping(value = "/sjhf")
 	public List<Menu> getTheVegToppings() {
-		return menuOperationsImpl.getVegToppings();
+		return menuOperations.getVegToppings();
 	}
 	
-	@GetMapping(value = "/")
+	@GetMapping(value = "/sjfhhbn")
 	public List<Menu> getTheNonVegToppings() {
-		return menuOperationsImpl.getNonVegToppings();
+		return menuOperations.getNonVegToppings();
 	}
 
 }

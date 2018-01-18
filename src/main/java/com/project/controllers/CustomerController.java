@@ -1,14 +1,15 @@
 package com.project.controllers;
 
-import javax.websocket.server.PathParam;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.project.dao.CustomerDaoImplementation;
+import com.project.dao.CustomerDao;
 import com.project.sources.Customer;
 import com.project.sources.Registered_Customers;
 
@@ -16,26 +17,32 @@ import com.project.sources.Registered_Customers;
 public class CustomerController {
 	
 	@Autowired
-	CustomerDaoImplementation customercontroller;
+	CustomerDao customerDao;
 	
-	@PostMapping(value = "/")
-	public void createNewCustomer(String name,String contact,String address) {
-		customercontroller.addCustomer(name,contact,address);
+	@PostMapping(value = "/xyz")
+	public void createNewCustomer(@RequestBody Customer cust) {
+		 customerDao.addCustomer(cust);
+		
 	}
 	
-	@DeleteMapping(value = "")
-	public void deleteTheCustomer(@PathParam(value = "customerId") int customerId) {
-		customercontroller.deleteCustomer(customerId);
+	@GetMapping(value="/rgter")
+	public int sendTheCustomerId() {
+		return customerDao.sendCustomerId();
 	}
 	
-	@PostMapping(value="/")
+	@DeleteMapping(value = "/srgesr/{customerId}")
+	public void deleteTheCustomer(@PathVariable int customerId) {
+		customerDao.deleteCustomer(customerId);
+	}
+	
+	@PostMapping(value="/valid")
 	public int validUser(Registered_Customers rc) {
-		return customercontroller.isValidUser(rc);
+		return customerDao.isValidUser(rc);
 	}
 	
-	@PutMapping(value="/")
+	@PutMapping(value="/drg")
 	public void updateTheCustomer(int customerId,String contact,String address) {
-		customercontroller.updateCustomer(contact,address,customerId);
+		customerDao.updateCustomer(contact,address,customerId);
 	}
 	
 	

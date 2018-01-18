@@ -6,19 +6,31 @@ public class Orders {
 	private int customerId;
 	private String status;
 	private double totalPrice;
-	
+	private String orderAddress;
 	
 	public Orders() {}
 
 
-	public Orders(int orderId, int customerId, String status, double totalPrice) {
+
+	public Orders(int orderId, int customerId, String status, double totalPrice, String orderAddress) {
 		super();
 		this.orderId = orderId;
 		this.customerId = customerId;
 		this.status = status;
 		this.totalPrice = totalPrice;
+		this.orderAddress = orderAddress;
 	}
 
+
+
+	public String getOrderAddress() {
+		return orderAddress;
+	}
+
+
+	public void setOrderAddress(String orderAddress) {
+		this.orderAddress = orderAddress;
+	}
 
 	public int getOrderId() {
 		return orderId;

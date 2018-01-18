@@ -3,16 +3,16 @@ package com.project.sources;
 public class OrderDetails {
 	private int odId;
 	private int orderId;
-	private int itemId;
-	private int cpId;
+	private String itemId;
+	private String cpId;
 	private int quantity;
-	private boolean isCP;
+	
 	
 	
 
 	public OrderDetails() {}
 
-	public OrderDetails(int odId, int orderId, int itemId, int cpId, int quantity) {
+	public OrderDetails(int odId, int orderId, String itemId, String cpId, int quantity) {
 		super();
 		this.odId = odId;
 		this.orderId = orderId;
@@ -37,27 +37,20 @@ public class OrderDetails {
 		this.orderId = orderId;
 	}
 
-	public int getItemId() {
+	public String getItemId() {
 		return itemId;
 	}
 
-	public void setItemId(int itemId) {
+	public void setItemId(String itemId) {
 		this.itemId = itemId;
 	}
 	
-	public boolean getisCP() {
-		return isCP;
-	}
 
-	public void setCP(boolean isCP) {
-		this.isCP = isCP;
-	}
-
-	public int getCpId() {
+	public String getCpId() {
 		return cpId;
 	}
 
-	public void setCpId(int cpId) {
+	public void setCpId(String cpId) {
 		this.cpId = cpId;
 	}
 
