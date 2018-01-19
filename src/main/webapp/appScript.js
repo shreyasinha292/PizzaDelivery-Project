@@ -194,17 +194,19 @@ app.service('menuService', function ($http) {
             }
         ];
 */      
-    	var temp = $http.get("http://localhost:8080/PizzaMiniProject/fdsgfwqg").then(function(response){
-    		console.log(response.data);
+    	return $http.get("/PizzaMiniProject/fdsgfwqg").then(function(response){
     		return response.data;
-    	})
-    	return temp;
+    	});
     }
 });
 
 
 app.controller("appController", function ($scope, menuService) {
-    $scope.menuItems = menuService.generateMenu();
+    $scope.menuItems;
+    menuService.generateMenu().then(function(data){
+    	$scope.menuItems = data;
+    });
+    console.log($scope.menuItems);
     $scope.vegPizzas = [];
     $scope.nonVegPizzas = [];
     $scope.vegToppings = [];
