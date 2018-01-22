@@ -73,9 +73,9 @@ insert into menu values("47","Chicken Sausage stuffed Crust","crust",1,130.00,0,
 insert into menu values("48","Veg stuffed Crust","crust",1,130.00,0,0," ");
 
 Running the project:
-1.First start running nginx
-2.Then start running project on Tomcat.
+1.Change the nginx config file and specify the path link in that.
+2.Then  run the nginx at that path where we have the html files.
+3..Then start running project on Tomcat.
 
 
-Project description:This project is about ordering a pizza Online.This Application also contain many features where in you can customize your pizza and pay for it.
-The other features include adding items to your cart and deleting items from the cart.
+Project description:This project is about ordering a pizza Online.This Application also contain many features where in you can customize your pizza and pay for it.The other features include adding items to your cart and deleting items from the cart.
