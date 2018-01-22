@@ -33,6 +33,17 @@ The schema consists of tables as below:
 Link for database creation:https://github.com/Sandeep-Banuka/Schema
 
 Populate the menu as follows:
+insert into menu values ("2","veg mexican" ,"veg",1,20.00,3,4.00,"jalepeno,corn,onion,capsicum,olives"); 
+insert into menu values ("1","nonveg mexican" ,"nonveg",1,200.00,300.00,400.00,"jalepeno,corn,onion,capsicum,olives,sausage"); 
+insert into menu values ("3","nonveg mexican + coke" ,"combo",1,200.00,300.00,400.00,"jalepeno,corn,onion,capsicum,olives,sausage,200mlcoke"); 
+
+insert into menu values("4","cheese margherita","veg",1,140.0,180.0,250.0,"A hugely popular margherita, with a deliciously tangy single cheese topping");
+insert into menu values("5","double cheese margherita","veg",1,160.0,200.0,280.0,"A hugely popular double cheese margherita, with a deliciously tangy cheese topping");
+insert into menu values("6","farm house","veg",1,150.0,190.0,260.0,"A pizza that goes ballistic on veggies! Check out this mouth watering overload of crunchy, crisp capsicum, succulent mushrooms and fresh tomatoes");
+insert into menu values("7","peppy paneer","veg",1,140.0,170.0,250.0,"Chunky paneer with crisp capsicum and spicy red pepper - quite a mouthful!");
+insert into menu values("8","chicken tikka","nonveg",1,140.0,180.0,250.0,"Chicken Tikka I Onion on Makhani Sauce");
+insert into menu values("9","chicken sausage","nonveg",1,150.0,180.0,240.0,"Chicken  Sausage with extra Cheese");
+insert into menu values("10","pepper barbecue chicken","nonveg",1,140.0,180.0,250.0,"Pepper Barbecue Chicken with extra Cheese");
 insert into menu values("11","onion","vegTopping",1,20.00,0,0," ");
 insert into menu values("12","green pepper","vegTopping",1,20.00,0,0," ");
 insert into menu values("13","red pepper","vegTopping",1,20.00,0,0," ");
